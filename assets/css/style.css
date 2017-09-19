@@ -1,0 +1,9 @@
+.tabla{
+  position: absolute;
+  top:3%;
+  left: 30%;
+}
+td{
+  height: 50px;
+  width: 50px;
+}
