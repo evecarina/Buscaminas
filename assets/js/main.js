@@ -22,23 +22,25 @@ for(var i=0;i<7;i++){
 // al hacer click dibujara el contenido del array
 ejecutar:function(){
   $('#btn_reiniciar').click(app.reiniciar);
-  $("td").click(function(event) {
-    $(this).attr('id');
-    let posicion=this.id
-    posicion.split(" ");
-    let i=posicion[0];
-    let j=posicion[1];
-   //  console.log(posicion[0]);
-    $(this).append(app.array[i][j]);
-   // al hacer click si es una bomba explotara
-   if(app.array[i][j]==" "){
+  $("td").click(app.configuracion);
+},
+configuracion :function(event){
+  $(this).attr('id');
+  let posicion=this.id
+  posicion.split(" ");
+  let i=posicion[0];
+  let j=posicion[1];
+  $(this).append(app.array[i][j]);
+  if(app.array[i][j]==" "){
      $(this).css("background-color", "#ffd659");
    }
-   if(app.array[i][j]=="*"){
+  if(app.array[i][j]=="*"){
+     $(this).empty();
+     $(this).append('<img src="assets/img/bombita.gif" alt="">')
      alert('perdistes');
+    //  cuando el jugador pierde no podra hacer click
      $('td').unbind('click');
    }
-   });
 },
 reiniciar:function(){
     $("table").empty();
