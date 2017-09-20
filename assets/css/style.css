@@ -1,24 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+body{
+  background-image: url('../img/fond2.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.container-fluid{
+  margin-top: 3%;
+}
 .tabla{
   display: flex;
-  align-content: center;
-  align-items: center;
-  margin: 2% 20%;
+  width: 100%;
+  margin-top: 2%;
+
+}
+#tabla{
+  border-color: #fff ;
 }
 td{
   height: 60px;
-  width: 60px;
-  align-items: center;
+  width: 60px;  /*align-items: center;*/
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+
 }
-@@media width-max(760px) {
+@media width-max(760px) {
   td{
+  position: absolute;
+    right: 0px;
     height: 20px;
-    width: 30px;
-    align-items: center;
+    width: 20px;
+    /*align-items: center;*/
   }
 }
 img{
-  width: 80%;
+  width: 60%;
 }
-.db_tabla button{
+button{
   margin-top: 2%;
+  margin-right: 10px;
+}
+p{
+  color: #f7cf75;
+  margin-left: 6%;
+  font-family: 'Lobster', cursive;
+  font-size: 2em;
 }

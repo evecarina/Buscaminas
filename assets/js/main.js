@@ -12,12 +12,13 @@ iniciar :function(){
 },
 
 dibujarTabla : function(){
-for(var i=0;i<7;i++){
-  $('#tabla').append('<tr></tr>');
-  for(j=0;j<7;j++){
-    $('#tabla').append(`<td id='${i}${j}'></td></tr>`);
+  for(var i=0;i<7;i++){
+    $('#tabla').append('<tr></tr>');
+    for(j=0;j<7;j++){
+      $('#tabla').append(`<td id='${i}${j}'></td>`);
+    }
   }
-}
+
 },
 // al hacer click dibujara el contenido del array
 ejecutar:function(){
@@ -32,12 +33,12 @@ configuracion :function(event){
   let j=posicion[1];
   $(this).append(app.array[i][j]);
   if(app.array[i][j]==" "){
-     $(this).css("background-color", "#ffd659");
+     $(this).css("background-color", "#c93434");
    }
   if(app.array[i][j]=="*"){
      $(this).empty();
      $(this).append('<img src="assets/img/bombita.gif" alt="">')
-     alert('perdistes');
+     alert('uy! Pisastes');
     //  cuando el jugador pierde no podra hacer click
      $('td').unbind('click');
    }
